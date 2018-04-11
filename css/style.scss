@@ -1,0 +1,129 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input,
+button,
+textarea,
+select {
+    outline: none;
+}
+
+%text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+%moretext {
+    display: box;
+    display: -webkit-box;
+    word-break: break-all;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin num($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin flex($j:space-between) {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: $j;
+    -webkit-justify-content: $j;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+html,
+body {
+    @include num(100%, 100%);
+}
+
+.wrap {
+    @include num(100%, 100%);
+    display: flex;
+    flex-direction: column;
+    font-size: .32rem;
+    background: #F0F0F0;
+}
+
+header {
+    @include num(100%, auto);
+    .head {
+        @include num(100%, 1.3rem);
+        @include flex();
+        padding: 0 .15rem;
+    }
+    nav {
+        @include num(100%, auto);
+        @include flex(space-around);
+        a {
+            @include flex();
+            flex-direction: column;
+            flex: 1;
+            margin: 0 .3rem;
+            i.icon {
+                @include num(1rem, 1rem);
+                font-size: .5rem;
+                text-align: center;
+                line-height: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 50%;
+                color: #8C8B8B;
+            }
+            span {
+                line-height: 2;
+                color: #8C8B8B;
+            }
+            &.active {
+                span {
+                    color: red;
+                }
+                i.icon {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+section {
+    flex: 1;
+    .box {
+        @include num(100%, 8rem);
+        div {
+            @include num(100%, 100%);
+            div {
+                @include num(100%, 100%);
+            }
+        }
+    }
+    .btns {
+        @include flex(space-around);
+        a {
+            @include num(50%, auto);
+            padding: .2rem 0;
+            border: 1px solid #ccc;
+            border-radius: .4rem;
+            text-align: center;
+        }
+        span {
+            padding: .2rem;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+        }
+    }
+}

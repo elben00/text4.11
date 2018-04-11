@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: .32rem;
+  background: #F0F0F0;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+header .head {
+  width: 100%;
+  height: 1.3rem;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+  padding: 0 .15rem;
+}
+
+header nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+header nav a {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 .3rem;
+}
+
+header nav a i.icon {
+  width: 1rem;
+  height: 1rem;
+  font-size: .5rem;
+  text-align: center;
+  line-height: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color: #8C8B8B;
+}
+
+header nav a span {
+  line-height: 2;
+  color: #8C8B8B;
+}
+
+header nav a.active span {
+  color: red;
+}
+
+header nav a.active i.icon {
+  color: red;
+}
+
+section {
+  flex: 1;
+}
+
+section .box {
+  width: 100%;
+  height: 8rem;
+}
+
+section .box div {
+  width: 100%;
+  height: 100%;
+}
+
+section .box div div {
+  width: 100%;
+  height: 100%;
+}
+
+section .btns {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+section .btns a {
+  width: 50%;
+  height: auto;
+  padding: .2rem 0;
+  border: 1px solid #ccc;
+  border-radius: .4rem;
+  text-align: center;
+}
+
+section .btns span {
+  padding: .2rem;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
